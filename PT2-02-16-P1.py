@@ -34,3 +34,7 @@ for i in L:
 print(vowels)
 
 
+n=1
+while n < 50:
+    print(L[17*n])
+    n = n + 1
