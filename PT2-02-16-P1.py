@@ -19,12 +19,13 @@ If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!'''
 
 my_second_string = ' alexander.gorelik@gmail.com'
-
+print('')
 print(L + my_second_string)
-
+print('')
 print('Explicit is better than implicit.' + my_second_string)
-
-print(len(L))
+print('')
+print('length of text=', len(L))
+print('')
 
 vowels = 0
 for i in L:
@@ -32,9 +33,10 @@ for i in L:
     if letter == "a" or letter == "e" or letter == "i" or letter == "o" or letter == "u" or letter == "y":
         vowels += 1
 print(vowels)
-
+print('')
 
 n=1
-while n < 50:
-    print(L[17*n])
+while n < 49:
+    index_number = 17 * n
+    print('%d%s') % (index_number, L[index_number])
     n = n + 1
