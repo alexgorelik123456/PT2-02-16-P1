@@ -1,5 +1,5 @@
 
-str_input = 'c*arp'
+str_input = 'c*a'
 dictionary = ['car', 'carpet', 'rat', 'rabbit', 'carmageddon', 'caramba', 'lufthansa', 'carnival', 'Canada', 'absolut', 'carlsberg']
 
 def autocomplete(str_input, dictionary):
@@ -13,7 +13,7 @@ def autocomplete(str_input, dictionary):
     for word in dictionary:
         if word.startswith(str1):
             words_found.append(word)
-    print(words_found)
+    print(words_found[:4])
 
 
 autocomplete(str_input, dictionary)
