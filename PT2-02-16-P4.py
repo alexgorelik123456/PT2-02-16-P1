@@ -13,7 +13,7 @@ def autocomplete(str_input, dictionary):
     for word in dictionary:
         if word.startswith(str1):
             words_found.append(word)
-    print(words_found[:4])
+    print(words_found[:5])
 
 
 autocomplete(str_input, dictionary)
