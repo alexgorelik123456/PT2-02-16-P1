@@ -1,5 +1,5 @@
 
-str_input = 'c*a'
+str_input = 'c*!@#$%^&*()a'
 dictionary = ['car', 'carpet', 'rat', 'rabbit', 'carmageddon', 'caramba', 'lufthansa', 'carnival', 'Canada', 'absolut', 'carlsberg']
 
 def autocomplete(str_input, dictionary):
