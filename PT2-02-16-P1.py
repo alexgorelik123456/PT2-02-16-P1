@@ -35,11 +35,12 @@ for i in L:
 print(vowels)
 print('')
 
-n=1
+n = 1
 while n < 49:
     index_number = 17 * n
     print('%d%s') % (index_number, L[index_number])
     n = n + 1
+
 
 def to_weird(my_string):
     str1 = my_string.lower()
@@ -53,3 +54,13 @@ def to_weird(my_string):
 
 
 to_weird('DON\'T PANIC!')
+
+mydict = {}
+for index in L:
+    if index in mydict:
+        mydict[index] = mydict[index] + 1
+    else:
+        mydict[index] = 1
+
+for k,v in mydict.items():
+    print('{}-{}'.format(k,v))
