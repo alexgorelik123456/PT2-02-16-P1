@@ -14,8 +14,8 @@ number2(789)
 
 
 def spam(numb):
-    print('egg' * numb)
-
+    for i in range(numb + 1): print('egg' * i)
+    
 spam(1)
 spam(3)
 spam(12)
