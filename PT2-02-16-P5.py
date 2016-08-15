@@ -19,3 +19,8 @@ def spam(numb):
 spam(1)
 spam(3)
 spam(12)
+
+def SUM (*args):
+    print(sum(args))
+
+SUM(1,2,3,4,78)
