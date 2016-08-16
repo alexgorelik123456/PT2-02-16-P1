@@ -13,5 +13,7 @@ my_string=''.join(my_input_list)
 my_string = re.sub(r'\s+', ' ', my_string)
 
 #delete symbols
-print re.findall('[a-z]', my_string)
+my_string = re.findall(r'\w+', my_string)
+string_epta = ' '.join(my_string)
+print (string_epta)
 
