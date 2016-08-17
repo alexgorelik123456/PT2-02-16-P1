@@ -2,6 +2,20 @@ import re
 string = "2014-9-01T12:48:3.2182"
 
 def parse(string):
+    split_t = re.split(r'[-T:.]', string)
+    time_stamp = {'hour': split_t[3:4], 'minute': split_t[4:5], 'second': split_t[5:6]}
+    date_stamp = {'year': split_t[:1], 'month': split_t[1:2], 'day': split_t[2:3]}
+    return time_stamp, date_stamp
+
+ts,ds = parse(string)
+print(ts)
+print(ds)
+
+'''
+import re
+string = "2014-9-01T12:48:3.2182"
+
+def parse(string):
     split_T_string = re.split(r'T', string)
 
     time_stamp_prev = split_T_string[1:2]
@@ -20,3 +34,4 @@ def parse(string):
 ts,ds = parse(string)
 print(ts)
 print(ds)
+'''
