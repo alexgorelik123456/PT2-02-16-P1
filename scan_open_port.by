@@ -14,9 +14,7 @@ if __name__ == '__main__':
     #scan reserved ports
     for i in range(0, 65000):
         s = socket(AF_INET, SOCK_STREAM)
-
         result = s.connect_ex((targetIP, i))
-
         if(result == 0) :
-            print 'Port %d: OPEN' % (i,)
+            print ('Port {} OPEN'.format(i,))
         s.close()
