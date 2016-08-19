@@ -7,7 +7,7 @@ target = socket.gethostbyname(my_host_name)
 from socket import *
 
 if __name__ == '__main__':
-    #target = raw_input('Enter host to scan: ')
+    #target = raw_input('Enter host to scan: ') #ну можно и вводить самому конечно
     targetIP = gethostbyname(target)
     print 'Starting scan on host...', targetIP
 
