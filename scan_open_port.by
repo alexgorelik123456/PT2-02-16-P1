@@ -31,3 +31,47 @@ def scan_free_port(targetIP):
         print (list_of_free_ports)
 
 scan_free_port('127.0.0.1')
+
+#____check_version_of_Python_____
+
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+import re
+import sys
+from socket import *
+
+def python_ver():
+    version_of_python = sys.version_info[:3]
+    if version_of_python[0] == 2:
+        print('Python 2.x')
+        scan_free_port2()
+    else:
+        print('Python 3.x')
+        scan_free_port3()
+
+targetIP = '127.0.0.1'
+
+def scan_free_port(targetIP):
+        print 'Starting scan on host...', targetIP
+        version_of_python = sys.version_info[:3]
+        if version_of_python[0] == 2:
+            print('Python 2.x')
+            for i in xrange(0, 65535):
+                s = socket(AF_INET, SOCK_STREAM)
+                result = s.connect_ex((targetIP, i))
+                if (result == 0):
+                    list_of_free_ports = i
+                    print('Port {} OPEN'.format(list_of_free_ports,))
+                s.close()
+        else:
+            print('Python 3.x')
+            for i in range(0, 65535):
+                s = socket(AF_INET, SOCK_STREAM)
+                result = s.connect_ex((targetIP, i))
+                if (result == 0):
+                    list_of_free_ports = i
+                    print('Port {} OPEN'.format(list_of_free_ports,))
+                s.close()
+
+
+scan_free_port(targetIP)
