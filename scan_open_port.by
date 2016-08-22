@@ -44,10 +44,8 @@ def python_ver():
     version_of_python = sys.version_info[:3]
     if version_of_python[0] == 2:
         print('Python 2.x')
-        scan_free_port2()
     else:
         print('Python 3.x')
-        scan_free_port3()
 
 targetIP = '127.0.0.1'
 
