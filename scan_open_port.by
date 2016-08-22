@@ -18,3 +18,16 @@ if __name__ == '__main__':
         if(result == 0) :
             print ('Port {} OPEN'.format(i,))
         s.close()
+        
+def scan_free_port(targetIP):
+        print 'Starting scan on host...', targetIP
+        for i in xrange(0, 65535):
+            s = socket(AF_INET, SOCK_STREAM)
+            result = s.connect_ex((targetIP, i))
+            if (result == 0):
+                list_of_free_ports = i
+                print('Port {} OPEN'.format(list_of_free_ports,))
+            s.close()
+        print (list_of_free_ports)
+
+scan_free_port('127.0.0.1')
