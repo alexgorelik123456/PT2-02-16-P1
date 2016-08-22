@@ -8,8 +8,7 @@ def parse(string):
     return time_stamp, date_stamp
 
 ts,ds = parse(string)
-print(ts)
-print(ds)
+print(ts, ds)
 
 '''
 import re
