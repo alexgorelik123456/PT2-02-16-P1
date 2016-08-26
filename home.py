@@ -23,7 +23,7 @@ class Price(object):
         self.price_reduce_benz = 100
         self.price_reduce_disel = 120
         if Price.distance % 1000 == 0:
-            self.cost_of_car = self.cost_of_car - self.price_reduce_benz
+            self.cost_of_car -= self.price_reduce_benz
 
 
 # class Car(Engine):
