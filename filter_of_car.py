@@ -1,4 +1,6 @@
-from pprint import *
+from pprint import pprint as p
+from operator import itemgetter
+
 ENG_TYPE_GASOLINE = 'gasoline'
 ENG_TYPE_DIESEL = 'diesel'
 
